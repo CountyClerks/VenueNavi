@@ -1,24 +1,27 @@
 import { useEffect, useState} from 'react'
-import restaurants from '../restaurants'
+import venues from '../venues'
 
 function renderVenue() {
-    const [restaurantArray, setRestaurantArray] = useState([{
+    const [venueArray, setVenueArray] = useState([{
         name: "",
         address: "",
-        cuisine: "",
-        price: "",
-        rating: ""
+        rating: "",
+        website: "",
+        photo: ""
     }])
     useEffect(() => {
-        setRestaurantArray(restaurants)
+        setVenueArray(venues)
     }, [])
 
     return (
         <>
-            {restaurantArray.map((item, index) => (
+            {venueArray.map((item, index) => (
                 <div key={index}>
                     <h1>{item.name}</h1>
-                    <p>{item.price}</p>
+                    <p>{item.address}</p>
+                    <p>{item.rating}</p>
+                    <p>{item.website}</p>
+                    <p>{item.photo}</p>
                 </div>
             ))}
         </>
