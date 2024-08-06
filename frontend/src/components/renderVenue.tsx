@@ -1,7 +1,7 @@
 import { useEffect, useState} from 'react'
 import venues from '../venues'
 
-function renderVenue() {
+export const renderVenue = () => {
     const [venueArray, setVenueArray] = useState([{
         name: "",
         address: "",
@@ -27,4 +27,3 @@ function renderVenue() {
         </>
     )
 }
-export default renderVenue
