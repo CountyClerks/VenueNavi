@@ -1,6 +1,7 @@
 // import { useState } from 'react'
 import './App.css'
-import  {SearchBar} from './components/SearchBar'
+import  {SearchBar} from './components/SearchBar/SearchBar'
+import { Header } from './components/Header/Header'
 
 // CURRENT DATA FROM .JSON IS JUST EXAMPLES! NOT REAL DATA TO BE USED IN PROD.
 
@@ -8,7 +9,10 @@ function App() {
 
   return (
     <>
-      <SearchBar />
+      <section className="Header">
+        <Header/>
+        <SearchBar />
+      </section>
     </>
   )
 }

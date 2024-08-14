@@ -1,0 +1,13 @@
+.header-link {
+    font-family: Inter;
+    font-size: 32px;
+    color: white;
+}
+
+.Header {
+    background-color: #024ddf;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5em;
+}

@@ -1,0 +1,14 @@
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: .5em;
+    background-color: white;
+    padding-left: .5em; 
+}
+
+.search-input {
+    min-height: 32px;
+    min-width: 235px;
+    border: none;
+    text-indent: 5px;
+}
