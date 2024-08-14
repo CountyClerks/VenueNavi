@@ -1,5 +1,5 @@
 import { useEffect, useState} from 'react'
-import venues from '../venues'
+import venues from '../../venues'
 
 export const renderVenue = () => {
     const [venueArray, setVenueArray] = useState([{
