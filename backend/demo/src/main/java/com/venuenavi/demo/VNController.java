@@ -1,26 +1,19 @@
 package com.venuenavi.demo;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import java.net.http.HttpRequest;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
+//Controller class dealing with 
 @RestController
-public class RestSpringBootController {
-    
-    @RequestMapping("/hello")
-    public String hello() {
-        return "Hello world";
-    }
+public class VNController {
 
-    @GetMapping(value = "/callclienthello")
-    private String getHelloClient() {
-        String uri = "http://localhost:8080/hello";
-        RestTemplate restTemplate = new RestTemplate();
-        String result = restTemplate.getForObject(uri, String.class);
-        return result;
-    }
+    @Autowired
+    public TicketmasterService ticketmasterService;
 
-    
+    @GetMapping("/search-events")
+    public String searchEvents(@RequestParam String keyword){
+        return ticketmasterService.searchEvents(keyword);
+    }
 }
