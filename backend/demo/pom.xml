@@ -37,7 +37,20 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.8.1</version> <!-- Specifies the compiler plugin version -->
+					<configuration>
+						<source>18</source> <!-- Set Java source version -->
+						<target>18</target> <!-- Set Java target version -->
+					</configuration>
+			</plugin>
 		</plugins>
+
+		
 	</build>
 
 </project>
