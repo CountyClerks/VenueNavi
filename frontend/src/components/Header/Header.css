@@ -1,13 +1,15 @@
-.header-link {
-    font-family: Inter;
-    font-size: 32px;
-    color: white;
+p {
+    font-family: Montserrat;
+    font-size: 28px;
+    color: black;
 }
 
-.Header {
-    background-color: #024ddf;
+.navbar {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    padding: 1.5em;
+}
+
+.header-right {
+    display: flex;
+    column-gap: 4em;
 }
